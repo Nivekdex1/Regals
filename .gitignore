@@ -1,0 +1,4 @@
+# Ignore SMTP config with secrets
+smtp-config.php
+contact.log
+recaptcha-config.php
