@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="footer-widget-content">
+                <div class="footer-widget-content" style="margin-left: 70px;">
                     <div class="footer-widget-title">
                         <h4>Quick Link</h4>
                     </div>
@@ -69,7 +69,7 @@
             <div class="col-md-12">
                 <div class="footer-bottom-content">
                     <div class="footer-bottom-content-copy">
-                        <p>Copyright &copy; <span class="copyright-year"></span> Oldham Legal. All rights reserved. <a href="https://oldhamlegal.co.uk">oldhamlegal.co.uk</a></p>
+                        <p>Copyright &copy; <span class="copyright-year"></span> Oldham Legal. All rights reserved.</p>
                     </div>
                 </div>
             </div>

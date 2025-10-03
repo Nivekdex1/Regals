@@ -323,6 +323,165 @@ include INCLUDES_DIR . '/header.php';
     </div>
 </section>
 
+<!--==================================================-->
+<!-- Start primeleg Marquee Area-->
+<!--==================================================-->
+<div class="marquee_area">
+	<div class="marquee_bg">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="marquee">
+						<div class="marquee-block">
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+	
+						</div>
+						<div class="marquee-block">
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+							<h3><span><img src="static/picture/marquee_img.png" class="rotates" alt=""></span>LOW MASTER</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End primeleg  Marquee Area-->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start primeleg Blog Area -->
+<!--==================================================-->
+<section class="blog_area style-two">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section_title text-center">
+					<h4>News Update</h4>
+					<h1>Discover New Insights <br>Newest <span>Blog</span> Post</h1>
+				</div>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="single-blog-box">
+					<div class="single-blog-thumb">
+						<img src="static/picture/blog1.png" alt="">							
+					</div>
+					<div class="blog-content">	
+						<div class="meta-blog">
+							<p><i class="bi bi-calendar-date"></i>22/08/2024<span><i class="bi bi-chat"></i>Comment</span></p>
+						</div>					
+						<div class="blog-title">
+							<h3><a href="blog-details.html">Doctrine Of Transparency To Lawyer
+							Promote Accountability</a></h3>
+						</div>
+						<div class="blog-btn">
+							<a href="blog-details.html"><i class="flaticon flaticon-right-arrow"></i>Read More <span class="teg">Business</span></a>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-lg-4 col-md-6">
+				<div class="single-blog-box">
+					<div class="single-blog-thumb">
+						<img src="static/picture/blog2.png" alt="">							
+					</div>
+					<div class="blog-content">	
+						<div class="meta-blog">
+							<p><i class="bi bi-calendar-date"></i>22/08/2024<span><i class="bi bi-chat"></i>Comment</span></p>
+						</div>					
+						<div class="blog-title">
+							<h3><a href="blog-details.html">Practice Of Collaboration To Foster 
+							Synergy Comfortness</a></h3>
+						</div>
+						<div class="blog-btn">
+							<a href="blog-details.html"><i class="flaticon flaticon-right-arrow"></i>Read More <span class="teg">Business</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-blog-box">
+					<div class="single-blog-thumb">
+						<img src="static/picture/blog3.png" alt="">							
+					</div>
+					<div class="blog-content">	
+						<div class="meta-blog">
+							<p><i class="bi bi-calendar-date"></i>22/08/2024<span><i class="bi bi-chat"></i>Comment</span></p>
+						</div>					
+						<div class="blog-title">
+							<h3><a href="blog-details.html">Doctrine Of Transparency To Lawyer
+							Promote Accountability</a></h3>
+						</div>
+						<div class="blog-btn">
+							<a href="blog-details.html"><i class="flaticon flaticon-right-arrow"></i>Read More <span class="teg">Business</span></a>
+						</div>
+					</div>
+				</div>
+			</div>					
+		</div>
+	</div>
+</section>
+<!--==================================================-->
+<!-- End primeleg Blog Area -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start primeleg Brand Area-->
+<!--==================================================-->
+<section class="brand_area">
+	<div class="container">
+		<div class="row">
+			<div class="brand_container">
+				<div class="brand_list owl-carousel">
+					<div class="col-lg-12">
+						<div class="single_brnd_item">
+							<img src="static/picture/brand1.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single_brnd_item">
+							<img src="static/picture/brand2.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single_brnd_item">
+							<img src="static/picture/brand3.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single_brnd_item">
+							<img src="static/picture/brand4.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single_brnd_item">
+							<img src="static/picture/brand5.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single_brnd_item">
+							<img src="static/picture/brand3.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--==================================================-->
+<!-- End primeleg  Brand Area  -->
+<!--==================================================-->
+
 <!-- Why choose us -->
 <section class="why_choose bg-light">
     <div class="container">
