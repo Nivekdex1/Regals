@@ -1697,7 +1697,7 @@ section.topber_area {
 }
 
 .topber_right_social {
-    text-align: right;
+    text-align: center;
 }
 .topber_right_social ul li {
     display: inline-block;
@@ -1942,16 +1942,16 @@ section.service_area.style_two .single_service_box:hover .low-hover-box {
   transform: scale(1);
 }
 .single_service_box:hover p.service_des2 {
-    color: #071417;
+    color: #CBA672;
 }
 .single_service_box:hover h3.service_title2 {
-    color: #071417;
+    color: #CBA672;
 }
 .single_service_box:hover .service_btn2 a  {
-    color: #071417;
+    color: #CBA672;
 }
 .single_service_box .service_btn2 a:hover i  {
-    color: #071417;
+    color: #CBA672;
 }
 
 

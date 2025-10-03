@@ -24,20 +24,20 @@ function clean($v){
 
 // Only accept POST
 if($_SERVER['REQUEST_METHOD'] !== 'POST'){
-    header('Location: contact.html');
+    header('Location: contact.php');
     exit;
 }
 
 // Start session to preserve input on errors
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 
-// Read fields (names from contact.html)
-$contact = isset($_POST['contact']) ? clean($_POST['contact']) : '';
-$name = isset($_POST['Victim Name']) ? clean($_POST['Victim Name']) : '';
-$phone = isset($_POST['Phone']) ? clean($_POST['Phone']) : '';
-$email = isset($_POST['Email']) ? clean($_POST['Email']) : '';
-$date = isset($_POST['mm/dd/yyyy']) ? clean($_POST['mm/dd/yyyy']) : '';
-$time = isset($_POST['Time']) ? clean($_POST['Time']) : '';
+// Read fields (support new standardized names and preserve backward compatibility)
+$department = isset($_POST['department']) ? clean($_POST['department']) : (isset($_POST['contact'])?clean($_POST['contact']):'');
+$name = isset($_POST['name']) ? clean($_POST['name']) : (isset($_POST['Victim Name'])?clean($_POST['Victim Name']):'');
+$phone = isset($_POST['phone']) ? clean($_POST['phone']) : (isset($_POST['Phone'])?clean($_POST['Phone']):'');
+$email = isset($_POST['email']) ? clean($_POST['email']) : (isset($_POST['Email'])?clean($_POST['Email']):'');
+$date = isset($_POST['date']) ? clean($_POST['date']) : (isset($_POST['mm/dd/yyyy'])?clean($_POST['mm/dd/yyyy']):'');
+$time = isset($_POST['time']) ? clean($_POST['time']) : (isset($_POST['Time'])?clean($_POST['Time']):'');
 $message = isset($_POST['message']) ? clean($_POST['message']) : '';
 // recaptcha token
 $recaptcha_token = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
@@ -71,26 +71,31 @@ if(count($errors)>0){
     // Preserve input and errors in session for UX on redirect
     $_SESSION['form_errors'] = $errors;
     $_SESSION['form_input'] = [
-        'contact'=>$contact,'Victim Name'=>$name,'Phone'=>$phone,'Email'=>$email,'mm/dd/yyyy'=>$date,'Time'=>$time,'message'=>$message
+        'department'=>$department,'name'=>$name,'phone'=>$phone,'email'=>$email,'date'=>$date,'time'=>$time,'message'=>$message
     ];
-    header('Location: contact.html?e=1');
+    header('Location: contact.php?e=1');
     exit;
 }
 
 // Build email
-$subject = "Website enquiry: ".($contact?:'General enquiry');
+$subject = "Website enquiry: ".($department?:'General enquiry');
 $body = "You have received a new enquiry from the website.\n\n";
 $body .= "Name: $name\n";
 $body .= "Email: $email\n";
 $body .= "Phone: $phone\n";
 $body .= "Preferred date: $date\n";
 $body .= "Preferred time: $time\n";
-$body .= "Department: $contact\n\n";
+$body .= "Department: $department\n\n";
 $body .= "Message:\n$message\n\n";
 $body .= "Company address: $companyAddress\n";
 
-$headers = "From: $name <$email>\r\n";
-$headers .= "Reply-To: $email\r\n";
+// Use a safe From header to avoid mail injection and SPF issues; set Reply-To to user email if valid
+$safe_from_email = filter_var($recipient, FILTER_VALIDATE_EMAIL) ? $recipient : 'no-reply@' . ($_SERVER['SERVER_NAME'] ?? 'localhost');
+$headers = "From: " . mb_encode_mimeheader('Oldham Legal Website') . " <" . $safe_from_email . ">\r\n";
+if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+    // sanitize reply-to
+    $headers .= "Reply-To: " . $email . "\r\n";
+}
 
 // Attempt to send
 // Attempt to send via SMTP using PHPMailer if configured, otherwise use mail()
@@ -139,11 +144,11 @@ $logline = date('Y-m-d H:i:s') . " | " . ($sent ? 'SENT' : 'FAILED') . " | " . $
 @file_put_contents(__DIR__ . '/contact.log', $logline, FILE_APPEND | LOCK_EX);
 
 if($sent){
-    header('Location: contact-thanks.html');
+    header('Location: contact-thanks.php');
     exit;
 } else {
     // Fallback: redirect back with failure flag
-    header('Location: contact.html?e=2');
+    header('Location: contact.php?e=2');
     exit;
 }
 

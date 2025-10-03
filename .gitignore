@@ -1,4 +1,8 @@
 # Ignore SMTP config with secrets
+.env
+# ignore local sensitive configs
 smtp-config.php
-contact.log
 recaptcha-config.php
+# ignore some folders
+image - Copy
+picture - Copy
